@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informativa Privacy | FGA House Solutions</title>
+  <meta name="description" content="Informativa privacy relativa ai form di contatto e di interesse dell'Ecosistema FGA.">
+  <style>
+    :root {
+      --bg: #eef0f4;
+      --card: #f7f7f8;
+      --text: #18213c;
+      --muted: #6b7890;
+      --border: #273454;
+      --primary: #0f1b3d;
+      --primary-hover: #162754;
+      --accent: #ff6a13;
+      --accent-soft: rgba(255, 106, 19, 0.08);
+      --shadow: 0 8px 24px rgba(15, 27, 61, 0.08);
+      --radius-xl: 26px;
+      --radius-lg: 20px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero,
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      margin-bottom: 22px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 106, 19, 0.03), transparent 42%),
+        var(--card);
+    }
+
+    .hero-content,
+    .card {
+      padding: 20px;
+    }
+
+    .hero-layout {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .hero-brandmark {
+      display: none;
+    }
+
+    .hero-brandmark img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      opacity: 0.08;
+      display: block;
+      margin-left: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 106, 19, 0.22);
+      background: rgba(15, 27, 61, 0.03);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .lang-switch {
+      display: inline-grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+      max-width: 260px;
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 106, 19, 0.24);
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: rgba(255, 106, 19, 0.08);
+    }
+
+    h1 {
+      margin: 18px 0 10px;
+      font-size: clamp(34px, 9vw, 54px);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(24px, 5vw, 34px);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section-head {
+      margin-bottom: 16px;
+    }
+
+    .section-intro,
+    .muted {
+      color: var(--muted);
+    }
+
+    .content-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-item {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.54);
+      border: 1px solid rgba(39, 52, 84, 0.08);
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .notice {
+      padding: 18px;
+      border-left: 3px solid rgba(255, 106, 19, 0.32);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      background: rgba(255, 255, 255, 0.42);
+      color: var(--muted);
+    }
+
+    .action-row {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .action-btn,
+    .doc-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 56px;
+      padding: 14px 18px;
+      border-radius: 22px;
+      border: 2px solid var(--border);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .action-btn {
+      background: rgba(255, 106, 19, 0.06);
+      border-color: rgba(255, 106, 19, 0.28);
+      color: var(--primary);
+    }
+
+    .action-btn:hover {
+      background: rgba(255, 106, 19, 0.12);
+    }
+
+    .doc-btn {
+      background: transparent;
+      border-color: rgba(255, 106, 19, 0.24);
+      color: var(--primary);
+    }
+
+    .doc-btn:hover {
+      background: rgba(255, 106, 19, 0.06);
+    }
+
+    .placeholder {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    @media (min-width: 700px) {
+      .wrap {
+        padding: 22px;
+      }
+
+      .hero-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
+      }
+
+      .hero-brandmark {
+        display: block;
+      }
+
+      .action-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 980px) {
+      .hero-content,
+      .card {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero section">
+      <div class="hero-content hero-layout">
+        <div>
+          <div class="eyebrow">FGA House Solutions</div>
+          <div class="lang-switch" aria-label="Language selector">
+            <button class="lang-btn active" type="button" data-lang="it" aria-pressed="true">Italiano</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">English</button>
+          </div>
+          <h1 id="hero-title">Informativa Privacy</h1>
+          <p class="subtitle" id="hero-subtitle">Informazioni sul trattamento dei dati personali ai sensi dell’art. 13 del Regolamento UE 2016/679 (GDPR).</p>
+          <p class="hero-text" id="hero-text">
+            Questa informativa descrive in modo chiaro come vengono trattati i dati raccolti attraverso i form collegati all’Ecosistema FGA e ai relativi contatti.
+          </p>
+        </div>
+        <div class="hero-brandmark" aria-hidden="true">
+          <img src="../assets/fga-house-solutions-logo.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <div class="section-head">
+        <h2 id="info-title">Dati principali</h2>
+        <p class="section-intro" id="info-intro">Di seguito trovi i riferimenti essenziali relativi al trattamento dei dati personali.</p>
+      </div>
+
+      <div class="info-list">
+        <div class="info-item">
+          <strong id="label-controller">Titolare del trattamento</strong>
+          <div id="controller-text">
+            FGA House Solutions di Cocchi Francesco<br>
+            Modena (MO), Italia<br>
+            Email: <a href="mailto:fgahouesesolutions@gmail.com">fgahouesesolutions@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <strong id="label-data">Dati trattati</strong>
+          <div id="data-text">
+            Nome, email, numero WhatsApp facoltativo, preferenze di soggiorno e consensi eventualmente rilasciati per ricevere comunicazioni future.
+          </div>
+        </div>
+
+        <div class="info-item">
+          <strong id="label-purpose">Finalità e base giuridica</strong>
+          <div id="purpose-text">
+            I dati vengono trattati per gestire la richiesta inviata tramite il form e, solo se hai espresso uno o più consensi, per inviarti aggiornamenti, proposte e offerte relative alle strutture FGA. La base giuridica è il consenso dell’interessato per le comunicazioni promozionali ai sensi dell’art. 6, par. 1, lett. a) GDPR. Se ci scrivi per richiedere informazioni o un primo contatto operativo, il trattamento può anche basarsi su misure precontrattuali richieste dall’interessato ai sensi dell’art. 6, par. 1, lett. b) GDPR.
+          </div>
+        </div>
+
+        <div class="info-item">
+          <strong id="label-retention">Conservazione dei dati</strong>
+          <div id="retention-text">
+            I dati saranno conservati per il tempo necessario a gestire la richiesta e, in presenza di consenso marketing, fino a revoca del consenso o richiesta di cancellazione, salvo eventuali obblighi di legge.
+          </div>
+        </div>
+
+        <div class="info-item">
+          <strong id="label-rights">Diritti dell’interessato</strong>
+          <div id="rights-text">
+            Puoi chiedere accesso, rettifica, cancellazione, limitazione del trattamento, opposizione o revoca del consenso scrivendo a <a href="mailto:fgahouesesolutions@gmail.com">fgahouesesolutions@gmail.com</a>. Hai inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali: <a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <div class="section-head">
+        <h2 id="form-title">Note sul form</h2>
+      </div>
+      <div class="notice" id="form-note">
+        Con l’invio del form dichiari di aver letto questa informativa. I consensi marketing restano facoltativi e separati per email e WhatsApp.
+      </div>
+      <div class="action-row">
+        <a class="action-btn" href="../index.html" id="back-ecosystem">Torna a Ecosistema FGA</a>
+        <a class="doc-btn" href="mailto:fgahouesesolutions@gmail.com" id="contact-email">Contattaci via email</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const LANGUAGE_CONTENT = {
+      it: {
+        pageTitle: "Informativa Privacy | FGA House Solutions",
+        heroTitle: "Informativa Privacy",
+        heroSubtitle: "Informazioni sul trattamento dei dati personali ai sensi dell’art. 13 del Regolamento UE 2016/679 (GDPR).",
+        heroText: "Questa informativa descrive in modo chiaro come vengono trattati i dati raccolti attraverso i form collegati all’Ecosistema FGA e ai relativi contatti.",
+        infoTitle: "Dati principali",
+        infoIntro: "Di seguito trovi i riferimenti essenziali relativi al trattamento dei dati personali.",
+        labelController: "Titolare del trattamento",
+        labelData: "Dati trattati",
+        dataText: "Nome, email, numero WhatsApp facoltativo, preferenze di soggiorno e consensi eventualmente rilasciati per ricevere comunicazioni future.",
+        labelPurpose: "Finalità e base giuridica",
+        purposeText: "I dati vengono trattati per gestire la richiesta inviata tramite il form e, solo se hai espresso uno o più consensi, per inviarti aggiornamenti, proposte e offerte relative alle strutture FGA. La base giuridica è il consenso dell’interessato per le comunicazioni promozionali ai sensi dell’art. 6, par. 1, lett. a) GDPR. Se ci scrivi per richiedere informazioni o un primo contatto operativo, il trattamento può anche basarsi su misure precontrattuali richieste dall’interessato ai sensi dell’art. 6, par. 1, lett. b) GDPR.",
+        labelRetention: "Conservazione dei dati",
+        retentionText: "I dati saranno conservati per il tempo necessario a gestire la richiesta e, in presenza di consenso marketing, fino a revoca del consenso o richiesta di cancellazione, salvo eventuali obblighi di legge.",
+        labelRights: "Diritti dell’interessato",
+        rightsText: "Puoi chiedere accesso, rettifica, cancellazione, limitazione del trattamento, opposizione o revoca del consenso scrivendo a ",
+        rightsTextAfter: ". Hai inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali: ",
+        formTitle: "Note sul form",
+        formNote: "Con l’invio del form dichiari di aver letto questa informativa. I consensi marketing restano facoltativi e separati per email e WhatsApp.",
+        backEcosystem: "Torna a Ecosistema FGA",
+        contactEmail: "Contattaci via email",
+        controllerAddressPlaceholder: "Modena (MO), Italia"
+      },
+      en: {
+        pageTitle: "Privacy Policy | FGA House Solutions",
+        heroTitle: "Privacy Policy",
+        heroSubtitle: "Information on the processing of personal data pursuant to Article 13 of Regulation (EU) 2016/679 (GDPR).",
+        heroText: "This notice explains in a clear way how data collected through forms connected to the FGA Ecosystem and related contacts are processed.",
+        infoTitle: "Key information",
+        infoIntro: "Below you can find the essential information relating to the processing of personal data.",
+        labelController: "Data Controller",
+        labelData: "Data processed",
+        dataText: "Name, email, optional WhatsApp number, stay preferences and any consents given to receive future communications.",
+        labelPurpose: "Purposes and legal basis",
+        purposeText: "The data are processed to manage the request sent through the form and, only if you have given one or more consents, to send you updates, proposals and offers related to FGA properties. The legal basis for promotional communications is the data subject’s consent pursuant to Article 6(1)(a) GDPR. If you contact us to request information or an initial operational contact, processing may also be based on pre-contractual steps requested by the data subject pursuant to Article 6(1)(b) GDPR.",
+        labelRetention: "Data retention",
+        retentionText: "The data will be stored for the time necessary to manage the request and, where marketing consent has been given, until consent is withdrawn or a deletion request is received, without prejudice to any legal obligations.",
+        labelRights: "Data subject rights",
+        rightsText: "You may request access, rectification, erasure, restriction of processing, objection or withdrawal of consent by writing to ",
+        rightsTextAfter: ". You also have the right to lodge a complaint with the Italian Data Protection Authority: ",
+        formTitle: "Form note",
+        formNote: "By submitting the form, you confirm that you have read this notice. Marketing consents remain optional and separate for email and WhatsApp.",
+        backEcosystem: "Back to FGA Ecosystem",
+        contactEmail: "Contact us by email",
+        controllerAddressPlaceholder: "[Full address to be inserted]"
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = LANGUAGE_CONTENT[lang] || LANGUAGE_CONTENT.it;
+      document.documentElement.lang = lang;
+      document.title = t.pageTitle;
+      document.getElementById("hero-title").textContent = t.heroTitle;
+      document.getElementById("hero-subtitle").textContent = t.heroSubtitle;
+      document.getElementById("hero-text").textContent = t.heroText;
+      document.getElementById("info-title").textContent = t.infoTitle;
+      document.getElementById("info-intro").textContent = t.infoIntro;
+      document.getElementById("label-controller").textContent = t.labelController;
+      document.getElementById("label-data").textContent = t.labelData;
+      document.getElementById("data-text").textContent = t.dataText;
+      document.getElementById("label-purpose").textContent = t.labelPurpose;
+      document.getElementById("purpose-text").textContent = t.purposeText;
+      document.getElementById("label-retention").textContent = t.labelRetention;
+      document.getElementById("retention-text").textContent = t.retentionText;
+      document.getElementById("label-rights").textContent = t.labelRights;
+      document.getElementById("form-title").textContent = t.formTitle;
+      document.getElementById("form-note").textContent = t.formNote;
+      document.getElementById("back-ecosystem").textContent = t.backEcosystem;
+      document.getElementById("contact-email").textContent = t.contactEmail;
+
+      const controllerText = document.getElementById("controller-text");
+      controllerText.innerHTML = `FGA House Solutions di Cocchi Francesco<br><span class="placeholder">${t.controllerAddressPlaceholder}</span><br>Email: <a href="mailto:fgahouesesolutions@gmail.com">fgahouesesolutions@gmail.com</a>`;
+
+      const rights = document.getElementById("rights-text");
+      rights.innerHTML = `${t.rightsText}<a href="mailto:fgahouesesolutions@gmail.com">fgahouesesolutions@gmail.com</a>${t.rightsTextAfter}<a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>.`;
+
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", String(active));
+      });
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage("it");
+  </script>
+</body>
+</html>
